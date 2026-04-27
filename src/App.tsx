@@ -6,10 +6,16 @@ interface Slide {
   alt: string
 }
 
-const SLIDES: Slide[] = [
-  { src: '/screenshots/landing-map.png',    label: 'Mapa · Paradas cercanas',   alt: 'Mapa con paradas cercanas' },
-  { src: '/screenshots/landing-line.png',   label: 'Línea · Recorrido completo', alt: 'Detalle de la línea 2' },
-  { src: '/screenshots/landing-search.png', label: 'Buscar · Líneas y paradas',  alt: 'Resultados de búsqueda' },
+const SLIDES_DARK: Slide[] = [
+  { src: '/screenshots/landing-map.webp',    label: 'Mapa · Paradas cercanas',    alt: 'Mapa con paradas cercanas' },
+  { src: '/screenshots/landing-line.webp',   label: 'Línea · Recorrido completo', alt: 'Detalle de la línea 2' },
+  { src: '/screenshots/landing-search.webp', label: 'Buscar · Líneas y paradas',  alt: 'Resultados de búsqueda' },
+]
+
+const SLIDES_LIGHT: Slide[] = [
+  { src: '/screenshots/light-map.webp',    label: 'Mapa · Paradas cercanas',    alt: 'Mapa con paradas cercanas' },
+  { src: '/screenshots/light-line.webp',   label: 'Línea · Recorrido completo', alt: 'Detalle de la línea 2' },
+  { src: '/screenshots/light-search.webp', label: 'Buscar · Líneas y paradas',  alt: 'Resultados de búsqueda' },
 ]
 
 function BrandIcon() {
@@ -31,11 +37,12 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
 
+  const slides = isDark ? SLIDES_DARK : SLIDES_LIGHT
+
   // One-time effect: read stored / system preference and sync state with DOM
   useEffect(() => {
     const stored = localStorage.getItem('ruta1-theme')
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
-    const initial = stored ?? (prefersDark ? 'dark' : 'light')
+    const initial = stored ?? 'dark'
     document.documentElement.setAttribute('data-theme', initial)
     setIsDark(initial === 'dark')
   }, [])
@@ -48,15 +55,16 @@ function App() {
       localStorage.setItem('ruta1-theme', theme)
       return next
     })
+    setActiveIndex(0)
   }, [])
 
   const go = useCallback((index: number) => {
-    setActiveIndex(((index % SLIDES.length) + SLIDES.length) % SLIDES.length)
+    setActiveIndex(((index % slides.length) + slides.length) % slides.length)
   }, [])
 
   const startTimer = useCallback(() => {
     timerRef.current = setInterval(() => {
-      setActiveIndex(prev => (prev + 1) % SLIDES.length)
+      setActiveIndex(prev => (prev + 1) % slides.length)
     }, 4000)
   }, [])
 
@@ -93,7 +101,7 @@ function App() {
   }, [go, restartTimer])
 
   const slideNum = String(activeIndex + 1).padStart(2, '0')
-  const slideTotal = String(SLIDES.length).padStart(2, '0')
+  const slideTotal = String(slides.length).padStart(2, '0')
 
   return (
     <div className="page">
@@ -162,7 +170,7 @@ function App() {
           <div className="carousel">
             <div className="phone">
               <div className="slides">
-                {SLIDES.map((slide, idx) => (
+                {slides.map((slide, idx) => (
                   <img
                     key={slide.src}
                     src={slide.src}
@@ -182,7 +190,7 @@ function App() {
                 <i className="mdi mdi-chevron-left" aria-hidden="true" />
               </button>
               <div className="dots">
-                {SLIDES.map((slide, idx) => (
+                {slides.map((slide, idx) => (
                   <button
                     key={slide.src}
                     className={idx === activeIndex ? 'dot active' : 'dot'}
@@ -201,7 +209,7 @@ function App() {
             </div>
             <div className="slide-label">
               <span className="num">{slideNum} / {slideTotal}</span>
-              {' · '}{SLIDES[activeIndex].label}
+              {' · '}{slides[activeIndex].label}
             </div>
           </div>
         </div>

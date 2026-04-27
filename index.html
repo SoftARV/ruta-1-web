@@ -12,8 +12,7 @@
     <script>
       (function() {
         var stored = localStorage.getItem('ruta1-theme');
-        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        var initial = stored || (prefersDark ? 'dark' : 'light');
+        var initial = stored || 'dark';
         document.documentElement.setAttribute('data-theme', initial);
       })();
     </script>
