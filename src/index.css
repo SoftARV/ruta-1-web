@@ -123,6 +123,8 @@ h1 em { font-style: italic; font-weight: 400; color: var(--accent); }
   transition: transform 0.15s ease;
 }
 .store:hover { transform: translateY(-1px); }
+.store--disabled { opacity: 0.45; cursor: not-allowed; }
+.store--disabled:hover { transform: none; }
 .store i { font-size: 30px; }
 .store .lines { display: flex; flex-direction: column; line-height: 1.1; text-align: left; }
 .store .small { font-size: 10.5px; opacity: 0.75; letter-spacing: 0.5px; }

@@ -126,20 +126,20 @@ function App() {
             cálido y legible. Sin cuentas, sin anuncios, sin complicaciones.
           </p>
           <div className="stores">
-            <a className="store" href="#" aria-label="Descargar en App Store">
+            <span className="store store--disabled" aria-label="App Store — próximamente">
               <i className="mdi mdi-apple" aria-hidden="true" />
               <span className="lines">
-                <span className="small">Descargar en</span>
+                <span className="small">Próximamente</span>
                 <span className="big">App Store</span>
               </span>
-            </a>
-            <a className="store" href="#" aria-label="Descargar en Google Play">
+            </span>
+            <span className="store store--disabled" aria-label="Google Play — próximamente">
               <i className="mdi mdi-google-play" aria-hidden="true" />
               <span className="lines">
-                <span className="small">Disponible en</span>
+                <span className="small">Próximamente</span>
                 <span className="big">Google Play</span>
               </span>
-            </a>
+            </span>
           </div>
           <div className="ticket-note">
             <span>Gratis</span>
