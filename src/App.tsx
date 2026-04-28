@@ -134,20 +134,6 @@ function App() {
             cálido y legible. Sin cuentas, sin anuncios, sin complicaciones.
           </p>
           <div className="stores">
-            <span className="store store--disabled" aria-label="App Store — próximamente">
-              <i className="mdi mdi-apple" aria-hidden="true" />
-              <span className="lines">
-                <span className="small">Próximamente</span>
-                <span className="big">App Store</span>
-              </span>
-            </span>
-            <span className="store store--disabled" aria-label="Google Play — próximamente">
-              <i className="mdi mdi-google-play" aria-hidden="true" />
-              <span className="lines">
-                <span className="small">Próximamente</span>
-                <span className="big">Google Play</span>
-              </span>
-            </span>
             <a className="store" href="https://pwa.ruta1.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir la versión web">
               <i className="mdi mdi-earth" aria-hidden="true" />
               <span className="lines">
@@ -161,8 +147,6 @@ function App() {
             <span>Gratis</span>
             <span className="sep" aria-hidden="true" />
             <span>Sin anuncios</span>
-            <span className="sep" aria-hidden="true" />
-            <span>iOS · Android</span>
           </div>
         </div>
 
@@ -238,7 +222,7 @@ function App() {
         <span>© 2026 Ruta 1 · Hecho en La Isla con cariño.</span>
         <div className="links">
           <a href="#">Privacidad</a>
-          <a href="mailto:hola@example.test">Contacto</a>
+          <a href="mailto:miguelrincon@pm.me">Contacto</a>
         </div>
       </footer>
     </div>
