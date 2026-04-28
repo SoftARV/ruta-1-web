@@ -148,7 +148,15 @@ function App() {
                 <span className="big">Google Play</span>
               </span>
             </span>
+            <a className="store" href="https://pwa.ruta1.app" target="_blank" rel="noopener noreferrer" aria-label="Abrir la versión web">
+              <i className="mdi mdi-earth" aria-hidden="true" />
+              <span className="lines">
+                <span className="small">Disponible ahora</span>
+                <span className="big">Versión web</span>
+              </span>
+            </a>
           </div>
+
           <div className="ticket-note">
             <span>Gratis</span>
             <span className="sep" aria-hidden="true" />
