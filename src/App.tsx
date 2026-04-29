@@ -221,7 +221,7 @@ function App() {
       <footer className="bottom">
         <span>© 2026 Ruta 1 · Hecho en La Isla con cariño.</span>
         <div className="links">
-          <a href="#">Privacidad</a>
+          <a href="/privacy/">Privacidad</a>
           <a href="mailto:miguelrincon@pm.me">Contacto</a>
         </div>
       </footer>
