@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Política de privacidad · Ruta 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("ruta1-theme");
+        var initial = stored || "dark";
+        document.documentElement.setAttribute("data-theme", initial);
+      })();
+    </script>
+    <style>
+      :root {
+        --bg: #f5efde;
+        --surface: #faf6ec;
+        --fg: #1b1b1b;
+        --fg-2: #3c3a34;
+        --muted: #7a6f5a;
+        --border: #e6dec5;
+        --border-2: #d7d1be;
+        --accent: #007b31;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+      }
+      [data-theme="dark"] {
+        --bg: #14120f;
+        --surface: #1f1c18;
+        --fg: #f3efe3;
+        --fg-2: #cfc7b3;
+        --muted: #a9a08a;
+        --border: #2c2924;
+        --border-2: #3d392f;
+        --accent: #34d399;
+        --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto,
+          Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        transition:
+          background 0.3s ease,
+          color 0.3s ease;
+      }
+
+      .page {
+        max-width: 680px;
+        margin: 0 auto;
+        padding: 28px 24px 64px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 48px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: var(--fg);
+      }
+
+      .brand-icon {
+        width: 34px;
+        height: 34px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .brand-icon img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .brand-name {
+        font-family: "Fraunces", serif;
+        font-weight: 600;
+        font-size: 18px;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-name em {
+        font-style: italic;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      .theme-toggle {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--surface);
+        border: 1px solid var(--border-2);
+        color: var(--fg);
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+        font-size: 17px;
+        transition: all 0.2s ease;
+      }
+
+      .theme-toggle:hover {
+        background: var(--fg);
+        color: var(--bg);
+      }
+
+      h1 {
+        font-family: "Fraunces", serif;
+        font-size: clamp(28px, 5vw, 38px);
+        font-weight: 700;
+        letter-spacing: -0.03em;
+        line-height: 1.15;
+        margin: 0 0 8px;
+        color: var(--fg);
+      }
+
+      .updated {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        font-size: 15px;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin: 36px 0 10px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--fg-2);
+        margin: 0 0 14px;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .section {
+        border-top: 1px solid var(--border);
+        padding-top: 28px;
+        margin-top: 4px;
+      }
+
+      .lang-divider {
+        border: none;
+        border-top: 2px solid var(--border-2);
+        margin: 56px 0;
+      }
+
+      footer {
+        margin-top: 56px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        font-size: 13px;
+        color: var(--muted);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <nav>
+        <a href="/" class="brand">
+          <span class="brand-icon">
+            <img
+              src="/icon.png"
+              alt="Ruta 1"
+              onerror="this.style.display = 'none'"
+            />
+          </span>
+          <span class="brand-name">Ruta <em>1</em></span>
+        </a>
+        <button
+          class="theme-toggle"
+          onclick="toggleTheme()"
+          aria-label="Cambiar tema"
+        >
+          ☀
+        </button>
+      </nav>
+
+      <!-- ── Español ─────────────────────────────────── -->
+      <h1>Política de privacidad</h1>
+      <p class="updated">Última actualización: abril 2026</p>
+
+      <div class="section">
+        <h2>Responsable</h2>
+        <p>
+          Miguel Rincón ·
+          <a href="mailto:miguelrincon@pm.me">miguelrincon@pm.me</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Datos que recogemos</h2>
+        <p>
+          La app solicita acceso a la
+          <strong>ubicación GPS del dispositivo</strong> únicamente mientras
+          está en uso. No se recoge ningún otro dato personal: no hay cuentas de
+          usuario, no hay identificadores de dispositivo, no hay analíticas.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Para qué usamos la ubicación</h2>
+        <p>
+          Exclusivamente para mostrar las paradas de autobús cercanas a tu
+          posición en el mapa. La ubicación se procesa en el propio dispositivo
+          y <strong>nunca se envía a ningún servidor</strong>.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Terceros</h2>
+        <p>
+          La versión web de la app utiliza <strong>Google Maps</strong> para
+          renderizar el mapa. Al cargar el mapa, el navegador realiza peticiones
+          a los servidores de Google para obtener los tiles de mapa. Estas
+          peticiones están sujetas a la
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener"
+            >política de privacidad de Google</a
+          >. Las apps nativas (iOS y Android) utilizan los mapas del sistema
+          operativo y no implican transferencia de datos a Google.
+        </p>
+        <p>
+          Los horarios de autobús se obtienen de los datos GTFS públicos del
+          <strong>Ayuntamiento de San Fernando</strong>. No se transmiten datos
+          personales en estas peticiones.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Almacenamiento y retención</h2>
+        <p>
+          No almacenamos ningún dato en servidores propios. Las preferencias de
+          la app (radio de búsqueda, idioma, tema, etc.) se guardan únicamente
+          en el almacenamiento local del dispositivo y nunca salen de él.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Tus derechos (RGPD)</h2>
+        <p>
+          Dado que no recopilamos ni almacenamos datos personales en ningún
+          servidor, no existe un perfil de usuario que eliminar ni exportar. Si
+          tienes alguna pregunta, escríbenos a
+          <a href="mailto:miguelrincon@pm.me">miguelrincon@pm.me</a>.
+        </p>
+      </div>
+
+      <hr class="lang-divider" />
+
+      <!-- ── English ─────────────────────────────────── -->
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 2026</p>
+
+      <div class="section">
+        <h2>Controller</h2>
+        <p>
+          Miguel Rincón ·
+          <a href="mailto:miguelrincon@pm.me">miguelrincon@pm.me</a>
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Data we collect</h2>
+        <p>
+          The app requests access to the device's
+          <strong>GPS location</strong> only while it is in use. No other
+          personal data is collected: no user accounts, no device identifiers,
+          no analytics.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Why we use your location</h2>
+        <p>
+          Solely to show nearby bus stops around your position on the map.
+          Location is processed on-device and
+          <strong>never sent to any server</strong>.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Third parties</h2>
+        <p>
+          The web version of the app uses <strong>Google Maps</strong> to render
+          the map. When the map loads, the browser makes requests to Google's
+          servers for map tiles. These requests are subject to
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            rel="noopener"
+            >Google's privacy policy</a
+          >. Native apps (iOS and Android) use the operating system's own maps
+          and do not involve any data transfer to Google.
+        </p>
+        <p>
+          Bus schedules are fetched from the public GTFS data provided by
+          <strong>San Fernando City Council</strong>. No personal data is
+          transmitted in these requests.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Storage and retention</h2>
+        <p>
+          We do not store any data on our own servers. App preferences (search
+          radius, language, theme, etc.) are saved only in the device's local
+          storage and never leave it.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2>Your rights (GDPR)</h2>
+        <p>
+          Since we do not collect or store personal data on any server, there is
+          no user profile to delete or export. If you have any questions,
+          contact us at
+          <a href="mailto:miguelrincon@pm.me">miguelrincon@pm.me</a>.
+        </p>
+      </div>
+
+      <footer>© 2026 Miguel Rincón · <a href="/">ruta1.app</a></footer>
+    </div>
+
+    <script>
+      function toggleTheme() {
+        var html = document.documentElement;
+        var current = html.getAttribute("data-theme");
+        var next = current === "dark" ? "light" : "dark";
+        html.setAttribute("data-theme", next);
+        localStorage.setItem("ruta1-theme", next);
+        document.querySelector(".theme-toggle").textContent =
+          next === "dark" ? "☀" : "☾";
+      }
+      // Sync icon on load
+      var t = document.documentElement.getAttribute("data-theme");
+      document.querySelector(".theme-toggle").textContent =
+        t === "dark" ? "☀" : "☾";
+    </script>
+  </body>
+</html>
